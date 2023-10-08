@@ -21,6 +21,7 @@ body {
   background: linear-gradient(var(--clr-edward), var(--clr-roman-coffee));
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .container {
