@@ -1,127 +1,138 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --clr-chambray: #355A85;
-    --clr-mirage: #192532;
-    --clr-edward: #A9ADAC;
-    --clr-roman-coffee: #79604F;
-    --clr-iron: #D3D8D7;
+  --clr-chambray: #355a85;
+  --clr-mirage: #192532;
+  --clr-edward: #a9adac;
+  --clr-roman-coffee: #79604f;
+  --clr-iron: #d3d8d7;
 }
 
 body {
-    font-family: 'Nanum Gothic', sans-serif;
-    line-height: 1.7;
-    min-height: calc(98vh + 10px);
-    display: grid;
-    place-items: center;
-    background: linear-gradient(var(--clr-edward), var(--clr-roman-coffee));
-    background-position: center;
-    background-size: cover;
-
+  font-family: "Nanum Gothic", sans-serif;
+  line-height: 1.7;
+  min-height: calc(98vh + 10px);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(var(--clr-edward), var(--clr-roman-coffee));
+  background-position: center;
+  background-size: cover;
 }
 
-.container{
-    perspective: 1200px;
-    z-index: 9999999;
+.container {
+  perspective: 1200px;
+  z-index: 9999999;
 }
 
 .profile-body {
-    font-style: italic;
-    font-weight: 100;
-    margin-bottom: 0;
+  font-style: italic;
+  font-weight: 100;
+  margin-bottom: 0;
 }
 
 .profile-name {
-    font-size: 2rem;
-    letter-spacing: 2px;
+  font-size: 2rem;
+  letter-spacing: 2px;
 }
 
 .profile-name::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 5em;
-    background: var(--clr-iron);
-    margin: 0.5em auto;
-    opacity: 0.4;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 5em;
+  background: var(--clr-iron);
+  margin: 0.5em auto;
+  opacity: 0.4;
 }
 
 .profile-occupation {
-    font-size:  1rem;
-    letter-spacing: 2px;
-    color: var(--clr-iron);
-    margin-bottom: 2em;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--clr-iron);
+  margin-bottom: 2em;
 }
 
 .card {
-    transform-style: preserve-3d;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    background: var(--clr-chambray);
-    color: var(--clr-iron);
-    text-align: center;
-    padding: 1.4em;
-    border-radius: 20px;
-    perspective: 3300px;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-chambray);
+  color: var(--clr-iron);
+  text-align: center;
+  padding: 1.4em;
+  border-radius: 20px;
+  perspective: 3300px;
 }
 
 .profile-photo {
-    border-radius: 50%;
-    border: 3px solid var(--clr-iron);
-    max-width: 100%;
-    height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--clr-iron);
+  max-width: 100%;
+  height: 200px;
 }
 
 .social-list {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 120px;
-    margin: 0 auto;
-    padding-top: 20px;
-    
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .social-link {
-    color: var(--clr-iron);
-    opacity: 0.5;
-    font-size: 1.5rem;
-    padding: 20px;
+  color: var(--clr-iron);
+  opacity: 0.5;
+  font-size: 1.5rem;
+  padding: 20px;
 }
 
 .social-link:hover,
 .social-link:focus {
-    opacity: 1;
+  opacity: 1;
 }
 .download-cv-text {
-    font-size: 10px;
+  font-size: 10px;
 }
 @media (min-width: 600px) {
-    .card {
-        flex-direction: row;
-        background: linear-gradient(to right, var(--clr-mirage) 40%, var(--clr-chambray) 20%);
-    }
+  .card {
+    flex-direction: row;
+    background: linear-gradient(
+      to right,
+      var(--clr-mirage) 40%,
+      var(--clr-chambray) 20%
+    );
+  }
 
-    .profile-photo {
-        max-width: 200px;
-    }
+  .profile-photo {
+    max-width: 200px;
+  }
 
-    .profile-info {
-        text-align: left;
-        margin-left: 2em;
- 
-    }
+  .profile-info {
+    text-align: left;
+    margin-left: 2em;
+  }
 
-    .profile-name::after {
-        margin-left: 0;
-    }
+  .profile-name::after {
+    margin-left: 0;
+  }
+}
+
+.animation-fade-dissapear {
+  animation: animation-opacity 2s forwards;
+}
+
+@keyframes animation-opacity {
+  100% {
+    opacity: 0;
+  }
 }
