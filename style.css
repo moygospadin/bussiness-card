@@ -15,17 +15,18 @@
 body {
     font-family: 'Nanum Gothic', sans-serif;
     line-height: 1.7;
-    min-height: 100vh;
+    min-height: calc(98vh + 10px);
     display: grid;
     place-items: center;
     background: linear-gradient(var(--clr-edward), var(--clr-roman-coffee));
     background-position: center;
     background-size: cover;
-    perspective: 500px;
+
 }
 
 .container{
     perspective: 1200px;
+    z-index: 9999999;
 }
 
 .profile-body {
